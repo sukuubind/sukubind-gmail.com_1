@@ -1,0 +1,15 @@
+<apex:page StandardController="Positions__c">
+<apex:form >
+<apex:pageBlock title="Hello {!$User.FirstName}  we are showing how to input a value">
+You are seeing details for {!Positions__c.name} position. <p/>
+Change Account Name: <p/>
+<apex:inputField value="{!Positions__c.name}"/>
+<apex:commandButton action="{!save}" value="Save new Position Name"/>
+
+
+
+</apex:pageBlock>
+
+</apex:form>
+  
+</apex:page>

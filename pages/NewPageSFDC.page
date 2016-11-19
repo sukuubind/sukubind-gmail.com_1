@@ -1,0 +1,20 @@
+<apex:page standardController="account">
+<apex:sectionHeader title=" Section Header Account Edit" subtitle="{!account.name}"/>
+<apex:pageMessages />
+<apex:form >
+<apex:pageBlock title=" PageBlock Account Edit" mode="edit">
+<apex:pageBlockButtons >
+<apex:commandButton value="Inside PageBlock CommandButton Save" action="{!Save}"/>
+<apex:commandButton value="Inside PageBlock CommandButton Cancel"  action="{!Cancel}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="PageBlockSection Account Info" columns="4">
+<apex:inputField value="{!account.name}"/>
+<apex:inputField value="{!account.phone}"/>
+<apex:inputField value="{!account.website}"/>
+<apex:inputField value="{!account.industry}"/>
+<apex:inputField value="{!account.fax}"/>
+<apex:inputField value="{!account.type}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

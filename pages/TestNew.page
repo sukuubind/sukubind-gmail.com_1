@@ -1,0 +1,25 @@
+<apex:page controller="sun_example" showHeader="false" sidebar="false" >  
+  <apex:form >  
+  <apex:pageBlock >  
+ <apex:pageBlockButtons location="both">   
+ <apex:commandButton action="{!generate_data}" value="Fetch Data"/>   
+ <apex:commandButton action="{!cancel_data}" value="Clear List"/>   
+ </apex:pageBlockButtons>  
+  <apex:pageBlockSection >  
+   <table>  
+  <tr>  
+    </tr>  
+   <tr>  
+  <td><b>Account Name</b></td><td><b>Custom object field</b></td><td><b>custom object field</b></td><td><b>product name</b></td></tr>  
+  <apex:repeat value="{!disp_list}" var="ttt">  
+  <tr><td>{!ttt.name}</td>  
+  <td>{!ttt.name1}</td>  
+  <td>{!ttt.ssn_number}</td>  
+  <td>{!ttt.productName}</td>  
+ </tr>  
+ </apex:repeat>  
+  </table>  
+  </apex:pageBlockSection>  
+  </apex:pageBlock>  
+  </apex:form>  
+ </apex:page>

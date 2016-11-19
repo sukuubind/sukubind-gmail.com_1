@@ -1,0 +1,12 @@
+<apex:page StandardController="Positions__c" >
+
+ <apex:pageBlock title="Hello {!$User.FirstName}!">
+ <apex:pageBlockSection title="Details">
+ The details are for "{!Positions__c.name}" Position.
+ 
+ </apex:pageBlockSection>
+ <apex:detail subject="{!Positions__c}" relatedList="true" />
+ </apex:pageBlock>
+
+
+</apex:page>

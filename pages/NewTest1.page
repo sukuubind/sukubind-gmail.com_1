@@ -1,0 +1,12 @@
+<apex:page standardController="Account">
+
+<apex:pageBlock title="Account Info">
+<apex:pageBlockSection title="Details">
+<apex:detail />
+</apex:pageBlockSection>
+
+
+
+</apex:pageBlock>
+
+  </apex:page>
