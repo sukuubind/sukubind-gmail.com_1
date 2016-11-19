@@ -1,0 +1,16 @@
+<apex:page controller="ContactListControllerWithCommandButton">
+  <apex:form >
+  <apex:pageBlock title="Contacts List with Command Button" id="contacts_list_with_command_button">
+  <apex:pageBlockTable value="{!Contacts}" var="ct">
+  <apex:column value="{!ct.FirstName}"/>
+  <apex:column value="{!ct.LastName}"/>
+  <apex:column value="{!ct.title}"/>
+  <apex:column value="{!ct.Email}"/>
+  </apex:pageBlockTable>
+  <apex:commandButton action="{!sortByFirstName}" value="Sort by FirstName"/>
+  <apex:commandButton action="{!sortByLastName}" value="Sort by LastName"/>
+  </apex:pageBlock>
+  
+  
+  </apex:form>
+</apex:page>

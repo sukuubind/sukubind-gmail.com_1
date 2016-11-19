@@ -1,0 +1,40 @@
+<apex:page controller="InnerClassController" >
+<apex:form >
+<apex:pageBlock title=" Account Fields to process " id="Accts_List">
+<apex:pageBlockTable value="{!acct}" var="ac">
+<apex:column value="{!ac.Name}"/>
+
+
+<apex:column value="{!ac.ownerid}"/>
+
+</apex:pageBlockTable>
+
+
+
+
+
+</apex:pageBlock>
+
+<apex:pageBlock title="Opportunities for Account " id="Oppty_List">
+<apex:pageBlockTable value="{!childOpps}" var="co">
+<apex:column value="{!co.opp.Name}"/>
+<apex:column value="{!co.opp.Amount}"/>
+<apex:column value="{!co.opp.StageName}"/>
+<apex:column value="{!co.opp.CloseDate}"/>
+<apex:column value="{!co.opp.ownerid}"/>
+<apex:column value="{!ReturnTaskClosed}"/>
+</apex:pageBlockTable>
+
+
+
+
+
+
+
+</apex:pageBlock>
+<apex:inputField value="{!acct.Rating}"/>
+<apex:outputText value="{!acct.name}">
+</apex:outputtext>
+<apex:commandButton value="Save"  action="{!save}" />
+  </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page standardController="Account">
+<apex:form >
+<apex:outputPanel id="loactionPicker">
+<apex:outputField value="{!location.country">
+<apex:inlineEditSupport event="ondblClick"/>
+</apex:outputField>
+</apex:outputPanel>
+<apex:commandButton value="Refresh Picklists" reRender="loctionPicker"/>
+
+
+
+ </apex:form> 
+</apex:page>
